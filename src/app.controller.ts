@@ -19,5 +19,10 @@ export class AppController {
     return this.appService.nonBlocking();
   }
 
+  @Get('promises')
+  async promises() {
+    return this.appService.promises()
+  }
+
 }
 
