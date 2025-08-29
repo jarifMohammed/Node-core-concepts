@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: node-core
+  name: node-core
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-core
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: node-core
+    spec:
+      containers:
+      - image: jarif33/node-core:first
+        name: node-core
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
