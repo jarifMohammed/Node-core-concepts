@@ -15,7 +15,7 @@ export class AppController {
     return this.appService.blocking();
   }
   @Get('nonBlocking')
-  nonBlocking() {
+  async nonBlocking() {
     return this.appService.nonBlocking();
   }
 
