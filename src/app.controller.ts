@@ -9,4 +9,15 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('blocking')
+  blocking() {
+    return this.appService.blocking();
+  }
+  @Get('nonBlocking')
+  nonBlocking() {
+    return this.appService.nonBlocking();
+  }
+
 }
+
